@@ -1,9 +1,9 @@
-# Name: 
+# Name: Oscar Duran
 
 ## About Me
-* School Email: 
-* Dream Career: 
-* Hidden Talent: 
+* School Email: durano6685@durhamtech.edu
+* Dream Career: Game Developer, Game Artist
+* Hidden Talent: Native Spanish speaker
 
 ## Course Information
 * Semester: 
