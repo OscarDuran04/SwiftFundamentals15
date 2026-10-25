@@ -11,12 +11,16 @@ print("How to use playgrounds to make writing Swift fun and simple")
  Now print your own phrases to the console. Pick one of your favorite songs. Use your knowledge of the `print` function to display the song title and artist.
  */
 
-
+print("I Wish That I Could Fall.")
+print("By Jamie Paige.")
 /*:
  Use multiple `print` functions to write out some of the lyrics to the song.
  */
 
-
+print("I wish that i could fall a little bit harder")
+print("I wish that i could fall like it would even matter")
+print("I wish that i could fall right into your life")
+print("but im not there at all on the other side")
 
 /*:
 
