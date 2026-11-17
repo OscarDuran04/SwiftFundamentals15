@@ -4,10 +4,17 @@
  The `Rectangle` struct below has two properties, one for width and one for height. Add a computed property that computes the area of the rectangle (i.e. width * height). Create an instance of `Rectangle` and print the `area` property.
  */
 struct Rectangle {
-    var width: Int
-    var height: Int
-    
+    var width: Double
+    var height: Double
+
+    var area: Double {
+        return width * height
+    }
 }
+
+var myRectangle = Rectangle(width: 10, height: 5)
+
+print(myRectangle.area)
 
 
 /*:
@@ -16,21 +23,32 @@ struct Rectangle {
  Create an instance of `Height` and then change one of its properties. Print out the other property to ensure that it was adjusted accordingly.
  */
 struct Height {
-    var heightInInches: Double
-    
-    var heightInCentimeters: Double
-    
-    init(heightInInches: Double) {
-        self.heightInInches = heightInInches
-        self.heightInCentimeters = heightInInches*2.54
+    var heightInInches: Double {
+        didSet {
+            let correctCentimeters = heightInInches * 2.54
+
+            if heightInCentimeters != correctCentimeters {
+                heightInCentimeters = correctCentimeters
+            }
+        }
     }
-    
-    init(heightInCentimeters: Double) {
-        self.heightInCentimeters = heightInCentimeters
-        self.heightInInches = heightInCentimeters/2.54
+
+    var heightInCentimeters: Double {
+        didSet {
+            let correctInches = heightInCentimeters / 2.54
+
+            if heightInInches != correctInches {
+                heightInInches = correctInches
+            }
+        }
     }
 }
 
+var myHeight = Height(heightInInches: 68, heightInCentimeters: 172.72)
+
+myHeight.heightInInches = 70
+
+print(myHeight.heightInCentimeters)
 
 
 /*:
